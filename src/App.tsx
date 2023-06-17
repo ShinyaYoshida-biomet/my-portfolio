@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Name } from './components/Name'
+import React from "react";
+import "./App.css";
+import { Box } from "@mui/material";
+import { NameAndRole } from "./components/NameAndRole";
 
 function App() {
   return (
-    <>
-      <Name name="Shinya Yoshida" ></Name>
-    </>
+    <Box className="App" style={{ backgroundColor: "#280471", color: "white", height: "100vh" }}>
+      <NameAndRole name="Shinya Yoshida" />
+    </Box>
   );
 }
 
