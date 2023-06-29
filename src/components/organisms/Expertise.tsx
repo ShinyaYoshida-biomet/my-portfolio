@@ -1,5 +1,8 @@
 import { Typography } from "../atoms/Typography";
+import WebIcon from '@mui/icons-material/Web';
+import InsightsIcon from '@mui/icons-material/Insights';
 import { Box, Grid } from "@mui/material";
+import logo from '../../logo.svg';
 import "./Expertise.css";
 
 export const Expertise = () => {
@@ -25,7 +28,19 @@ export const Expertise = () => {
             borderWidth: "3px",
           }}
         >
-          <Typography variant="h4">Web App</Typography>
+          
+          <Typography variant="h4" sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>            
+            <WebIcon
+              sx={{
+                fontSize: '3rem',
+                marginRight: '2rem'
+              }} />
+                 Web App
+          </Typography>
 
           <Typography
             variant="h6"
@@ -81,7 +96,18 @@ export const Expertise = () => {
             borderWidth: "3px",
           }}
         >
-          <Typography variant="h4">Data Science</Typography>
+          <Typography variant="h4" sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <InsightsIcon
+              sx={{
+                fontSize: '3rem',
+                marginRight: '2rem'
+              }} />          
+            Data Science
+          </Typography>
 
           <Typography
             variant="h6"
