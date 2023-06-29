@@ -12,10 +12,10 @@ export const Typography = (
 ) => { 
   return (
     <TP variant={variant} sx={{
-      ...sx,
       fontFamily: "CustomFont",
       fontWeight: "bold",
-      textAlign: "center"
+      textAlign: "center",      
+      ...sx,
     }}>
       {children}
     </TP>

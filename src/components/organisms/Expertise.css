@@ -13,12 +13,12 @@
   width: 90%;
   max-height: 60%;
   overflow: auto;
-  margin: 2rem ;
+  margin: 0 2rem 0 2rem;
   padding: 0rem 2rem;
   line-height: 1.7;
   font-size: 1.1em;
   color: #fff;
-  border-left: 4px solid darkcyan;
+  border-left: 2.5px solid darkcyan;
 }
 
 
