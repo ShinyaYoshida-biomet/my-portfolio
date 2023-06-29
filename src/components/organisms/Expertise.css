@@ -13,24 +13,12 @@
   width: 90%;
   max-height: 60%;
   overflow: auto;
-  /* max-width: 100%; */
   margin: 2rem ;
   padding: 0rem 2rem;
   line-height: 1.7;
   font-size: 1.1em;
   color: #fff;
-  /* background: #fff; */
   border-left: 4px solid darkcyan;
-  /* &::before{
-    content:'<blockquote>';
-    max-height: 90%;
-    top: -2rem;
-  }
-  &::after{
-    content: '</blockquote>';
-    max-height: 90%;
-    bottom: -2rem;
-  } */
 }
 
 
