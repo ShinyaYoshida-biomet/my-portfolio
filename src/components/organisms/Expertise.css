@@ -1,0 +1,30 @@
+/*** GENERAL STYLES ***/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*** BLOCKQOUTES STYLES ***/
+
+.block1{
+  position: relative;
+  width: 90%;
+  /* max-width: 100%; */
+  margin: 2rem ;
+  padding: 0rem 2rem;
+  line-height: 1.7;
+  font-size: 1.1em;
+  color: #fff;
+  /* background: #fff; */
+  border-left: 4px solid darkcyan;
+  &::before{
+    content:'<blockquote>';
+    top: -2rem;
+  }
+  &::after{
+    content: '</blockquote>';
+    bottom: -2rem;
+  }
+}
