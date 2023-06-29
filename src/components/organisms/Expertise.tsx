@@ -21,7 +21,7 @@ export const Expertise = () => {
         <Grid
           item
           xs={5.5}
-          height="50vh"
+          height="60vh"
           sx={{
             borderColor: "gray",
             borderStyle: "solid",
@@ -89,7 +89,7 @@ export const Expertise = () => {
         <Grid
           item
           xs={5.5}
-          height="50vh"
+          height="60vh"
           sx={{
             borderColor: "gray",
             borderStyle: "solid",
