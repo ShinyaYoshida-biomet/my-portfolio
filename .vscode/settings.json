@@ -1,0 +1,22 @@
+{
+  "files.exclude": {
+    "amplify/.config": true,
+    "amplify/**/*-parameters.json": true,
+    "amplify/**/amplify.state": true,
+    "amplify/**/transform.conf.json": true,
+    "amplify/#current-cloud-backend": true,
+    "amplify/backend/amplify-meta.json": true,
+    "amplify/backend/awscloudformation": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "workbench.colorCustomizations": {
+        "activityBar.background": "#1976d2",
+        "activityBar.foreground": "#fff",
+        "activityBar.activeBackground": "#2196f3",
+        "activityBar.inactiveForeground": "#fff",
+        "statusBar.background": "#1976d2",
+        "statusBar.foreground": "#fff",
+        "titleBar.activeBackground": "#1976d2",
+        "titleBar.activeForeground": "#fff",
+  }
+}

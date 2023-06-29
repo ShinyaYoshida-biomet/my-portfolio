@@ -1,6 +1,19 @@
+ @font-face {
+  font-family: 'CustomFont';
+  src: url('./fonts/RictyDiminished-Regular.ttf') format('truetype');
+}
+
+
 .App {
   text-align: center;
-}
+  font-family: 'Hanalei Fill', cursive;
+ }
+
+
+
+ .font-link {
+  font-family:  'Hanalei Fill', cursive;
+ }
 
 .App-logo {
   height: 40vmin;
