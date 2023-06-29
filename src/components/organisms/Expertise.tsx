@@ -4,14 +4,7 @@ import "./Expertise.css";
 
 export const Expertise = () => {
   return (
-    <Box
-      sx={
-        {
-          // display: 'flex',
-          // justifyContent: 'center',
-        }
-      }
-    >
+    <Box>
       <Typography variant="h1">My Expertise</Typography>
       <Grid
         container
