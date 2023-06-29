@@ -1,4 +1,4 @@
-import {Typography} from '../atoms/Typography';
+import { Typography } from '../atoms/Typography';
 import { Box, Grid } from '@mui/material';
 import './Expertise.css'
 
@@ -22,7 +22,6 @@ export const Expertise = () => {
         <Typography variant='h4'>
           Web App
         </Typography>
-        {/* <pre><code>text</code></pre> */}
         <blockquote className='block1' style={{fontFamily: 'CustomFont'}}>
           Passionate about UI/UX.
           Over 4 years of development experience in HTML, CSS, JS, React and NextJS frameworks.
