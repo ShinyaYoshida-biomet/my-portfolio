@@ -23,6 +23,7 @@ function App() {
         color: "white",
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
         minHeight: "100vh",
       }}>
           <Expertise />
