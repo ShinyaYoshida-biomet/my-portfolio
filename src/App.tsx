@@ -5,11 +5,13 @@ import { NameAndRole } from "./components/NameAndRole";
 
 function App() {
   return (
-    <Box className="App" style={
+    <Box className="App" sx={
       {
         backgroundColor: "#15202b",
         color: "white",
-        // height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        minHeight: "100vh",
       }
     }>
       <NameAndRole name="Shinya Yoshida" />
