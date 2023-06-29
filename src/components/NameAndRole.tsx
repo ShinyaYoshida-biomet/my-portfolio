@@ -8,7 +8,7 @@ export const NameAndRole = ({ name }: { name: string }) => {
           {name}
         </Typography>
         <Typography variant='h4' fontWeight={"bold"} fontFamily={"CustomFont"}>
-          SOFTWARE ENGINEER, FRONT END & DATA SCIENCE.
+          WEB APP DEVELOPER / DATA SCIENTIST.
         </Typography>
       </Container>
     </>

@@ -5,7 +5,13 @@ import { NameAndRole } from "./components/NameAndRole";
 
 function App() {
   return (
-    <Box className="App" style={{ backgroundColor: "#280471", color: "white", height: "100vh" }}>
+    <Box className="App" style={
+      {
+        backgroundColor: "#15202b",
+        color: "white",
+        // height: "100vh",
+      }
+    }>
       <NameAndRole name="Shinya Yoshida" />
     </Box>
   );
