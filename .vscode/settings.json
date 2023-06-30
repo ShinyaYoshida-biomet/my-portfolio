@@ -10,13 +10,13 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "workbench.colorCustomizations": {
-        "activityBar.background": "#1976d2",
+        "activityBar.background": "#15202b",
         "activityBar.foreground": "#fff",
-        "activityBar.activeBackground": "#2196f3",
+        "activityBar.activeBackground": "#1976d2",
         "activityBar.inactiveForeground": "#fff",
-        "statusBar.background": "#1976d2",
+        "statusBar.background": "#15202b",
         "statusBar.foreground": "#fff",
-        "titleBar.activeBackground": "#1976d2",
+        "titleBar.activeBackground": "#15202b",
         "titleBar.activeForeground": "#fff",
   }
 }
