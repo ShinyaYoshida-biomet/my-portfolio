@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Box } from "@mui/material";
-import { NameAndRole } from "./components/NameAndRole";
+import { NameAndRole } from "./components/organisms/NameAndRole";
 import { Expertise } from "./components/organisms/Expertise";
 
 function App() {

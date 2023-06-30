@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from "@mui/material"
-import { ScrollButton } from "./atoms/ScrollButton/ScrollButton"
+import { ScrollButton } from "../atoms/ScrollButton/ScrollButton"
 
 export const NameAndRole = ({ name }: { name: string }) => {
   return (
