@@ -5,7 +5,7 @@ export const Portfolio = () => {
   return (
     <Box>
       <Typography variant='h1'>
-        My Work
+        Portfolio
       </Typography>
     </Box>
   );

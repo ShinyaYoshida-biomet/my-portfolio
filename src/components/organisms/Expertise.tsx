@@ -106,7 +106,7 @@ export const Expertise = () => {
                 fontSize: '3rem',
                 marginRight: '2rem'
               }} />          
-            Data Science
+            AI Engineering
           </Typography>
 
           <Typography
