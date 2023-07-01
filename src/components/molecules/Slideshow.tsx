@@ -3,7 +3,9 @@ import { useState, useEffect, useRef } from 'react';
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
 
-export const Slideshow = () => {
+export const Slideshow = (
+  {children}: {children: React.ReactNode[]}
+) => {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -34,12 +36,14 @@ export const Slideshow = () => {
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {colors.map((backgroundColor, index) => (
+        {children.map((child ,index) => (
           <div
             className="slide"
             key={index}
-            style={{ backgroundColor }}
-          ></div>
+            // style={{ backgroundColor }}
+          >
+            {child}
+          </div>
         ))}
       </div>
 

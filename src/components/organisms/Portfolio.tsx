@@ -5,8 +5,7 @@ import { Slideshow  } from "../molecules/Slideshow";
 
 export const Portfolio = () => {
   return (
-    <Box>
-      <Slideshow></Slideshow>
+    <Box>      
       <Grid container spacing={3}>
         <Grid item xs={4} sx={{ width: "100%" }}>
           <Typography
@@ -22,13 +21,28 @@ export const Portfolio = () => {
             My Work
           </Typography>
         </Grid>
-        <Grid item xs={8}>
-          <ReactPlayer
-            url={"/OnePieceFilmeFlamesDemo.mp4"}
-            controls
-            width="100%"
-            height="auto"
-          />
+        <Grid item xs={8} sx={{width: '100%'}}>
+          <Slideshow children={
+            [
+              <ReactPlayer
+              url={"/OnePieceFilmeFlamesDemo.mp4"}
+              controls
+              width="80%"
+              height="auto"
+              />,
+              <ReactPlayer
+                url={"/OnePieceFilmeFlamesDemo.mp4"}
+                controls
+                width="80%"
+                height="auto"
+              />,
+              <ReactPlayer
+                url={"/OnePieceFilmeFlamesDemo.mp4"}
+                controls
+                width="80%"
+                height="auto"
+              />,              
+            ]}></Slideshow>          
         </Grid>
       </Grid>
     </Box>
