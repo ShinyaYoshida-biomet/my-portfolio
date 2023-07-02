@@ -28,6 +28,7 @@ export const CardWithMedia = ({
           sx={{
             display: "inline-block",
             whiteSpace: "pre-line",
+            fontWeight: 'normal'
           }}
         >
           {description}
