@@ -34,13 +34,13 @@ export const Slideshow = (
     <div className="slideshow">
       <div
         className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}        
       >
         {children.map((child ,index) => (
           <div
             className="slide"
             key={index}
-            // style={{ backgroundColor }}
+            style={{ justifyContent: 'center', alignItems: 'center'}}
           >
             {child}
           </div>

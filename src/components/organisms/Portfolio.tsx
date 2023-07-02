@@ -31,17 +31,18 @@ export const Portfolio = () => {
               height="auto"
               />,
               <ReactPlayer
-                url={"/OnePieceFilmeFlamesDemo.mp4"}
+                url={"/selfPRGPT.mp4"}
                 controls
                 width="80%"
                 height="auto"
               />,
-              <ReactPlayer
-                url={"/OnePieceFilmeFlamesDemo.mp4"}
-                controls
-                width="80%"
-                height="auto"
-              />,              
+              // <ReactPlayer
+              //   url={"/selfPRGPT.mp4"}
+              //   controls
+              //   width="80%"
+              //   height="auto"
+              // />,              
+              <img src="/Coming_Soon.png" alt='' width='80%'/>,
             ]}></Slideshow>          
         </Grid>
       </Grid>
