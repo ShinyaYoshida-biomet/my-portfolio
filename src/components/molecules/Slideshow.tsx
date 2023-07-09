@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef } from 'react';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { useState, useEffect, useRef } from "react";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import { Container, Grid } from "@mui/material";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
 
-export const Slideshow = (
-  { children }: { children: React.ReactNode[] }
-) => {
+export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // To disable auto slide, comment out the useEffect below
   function resetTimeout() {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -33,11 +33,15 @@ export const Slideshow = (
   }, [index, children.length]);
 
   const goToPrevSlide = () => {
-    setIndex((prevIndex) => (prevIndex === 0 ? colors.length - 1 : prevIndex - 1));
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? colors.length - 1 : prevIndex - 1
+    );
   };
 
   const goToNextSlide = () => {
-    setIndex((prevIndex) => (prevIndex === colors.length - 1 ? 0 : prevIndex + 1));
+    setIndex((prevIndex) =>
+      prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   return (
@@ -50,22 +54,33 @@ export const Slideshow = (
           <div
             className="slide"
             key={index}
-            style={{ justifyContent: 'center', alignItems: 'center' }}
+            style={{ justifyContent: "center", alignItems: "center" }}
           >
             {child}
           </div>
         ))}
       </div>
 
-      <div className="slideshowArrows">
-        <button className="slideshowArrow" onClick={goToPrevSlide}>
-          <NavigateBeforeIcon />
-        </button>
-        <button className="slideshowArrow" onClick={goToNextSlide}>
-          <NavigateNextIcon />
-        </button>
-      </div>
+      <Container sx={{marginTop: "3%"}}>
+      <Grid container display="spaceBetween">
+        <Grid item xs={1}>
+        </Grid>
+        <Grid item xs={5}>
+          <ArrowCircleLeftIcon
+            sx={{ fontSize: "60px" }}
+            onClick={goToPrevSlide}
+          />
+        </Grid>
+        <Grid item xs={5}>
+          <ArrowCircleRightIcon
+            sx={{ fontSize: "60px" }}
+            onClick={goToNextSlide}
+          />
+        </Grid>
+        <Grid item xs={1}>
+        </Grid>
+        </Grid>
+      </Container>
     </div>
   );
-}
-
+};
