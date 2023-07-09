@@ -3,8 +3,7 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import { Container, Grid } from "@mui/material";
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-const delay = 2500;
+const delay = 10000;
 
 export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
   const [index, setIndex] = useState(0);
@@ -34,13 +33,13 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
 
   const goToPrevSlide = () => {
     setIndex((prevIndex) =>
-      prevIndex === 0 ? colors.length - 1 : prevIndex - 1
+      prevIndex === 0 ? children.length - 1 : prevIndex - 1
     );
   };
 
   const goToNextSlide = () => {
     setIndex((prevIndex) =>
-      prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+      prevIndex === children.length - 1 ? 0 : prevIndex + 1
     );
   };
 
