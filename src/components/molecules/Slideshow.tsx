@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
 
 export const Slideshow = (
-  {children}: {children: React.ReactNode[]}
+  { children }: { children: React.ReactNode[] }
 ) => {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -20,7 +22,7 @@ export const Slideshow = (
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          prevIndex === children.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -28,36 +30,42 @@ export const Slideshow = (
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [index, children.length]);
+
+  const goToPrevSlide = () => {
+    setIndex((prevIndex) => (prevIndex === 0 ? colors.length - 1 : prevIndex - 1));
+  };
+
+  const goToNextSlide = () => {
+    setIndex((prevIndex) => (prevIndex === colors.length - 1 ? 0 : prevIndex + 1));
+  };
 
   return (
     <div className="slideshow">
       <div
         className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}        
+        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {children.map((child ,index) => (
+        {children.map((child, index) => (
           <div
             className="slide"
             key={index}
-            style={{ justifyContent: 'center', alignItems: 'center'}}
+            style={{ justifyContent: 'center', alignItems: 'center' }}
           >
             {child}
           </div>
         ))}
       </div>
 
-      <div className="slideshowDots">
-        {colors.map((_, idx) => (
-          <div
-            key={idx}
-            className={`slideshowDot${index === idx ? " active" : ""}`}
-            onClick={() => {
-              setIndex(idx);
-            }}
-          ></div>
-        ))}
+      <div className="slideshowArrows">
+        <button className="slideshowArrow" onClick={goToPrevSlide}>
+          <NavigateBeforeIcon />
+        </button>
+        <button className="slideshowArrow" onClick={goToNextSlide}>
+          <NavigateNextIcon />
+        </button>
       </div>
     </div>
   );
 }
+
