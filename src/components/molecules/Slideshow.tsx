@@ -7,6 +7,7 @@ const delay = 5000;
 
 export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
   const [index, setIndex] = useState(0);
+  const [activeButton, setActiveButton] = useState("");
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // To disable auto slide, comment out the useEffect below
@@ -43,6 +44,14 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
     );
   };
 
+  const handleButtonPress = (buttonName: string) => {
+    setActiveButton(buttonName);
+  };
+
+  const handleButtonRelease = () => {
+    setActiveButton("");
+  };
+
   return (
     <div
       style={{
@@ -64,10 +73,10 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
             style={{
               justifyContent: "center",
               alignItems: "center",
-              display: "inlineBlock",
+              display: "inline-block",
               height: "400px",
               width: "100%",
-              borderRadius: "40px"
+              borderRadius: "40px",
             }}
           >
             {child}
@@ -76,17 +85,33 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
       </div>
 
       <Container sx={{ marginTop: "3%" }}>
-        <Grid container display="spaceBetween">
+        <Grid container style={{ justifyContent: "spaceBetween" }}>
           <Grid item xs={1}></Grid>
           <Grid item xs={5}>
             <ArrowCircleLeftIcon
-              sx={{ fontSize: "60px", cursor: "pointer" }}
+              sx={{
+                fontSize: "60px",
+                cursor: "pointer",
+                color: activeButton === "left" ? "black" : "white",
+              }}
+              onMouseDown={() => handleButtonPress("left")}
+              onMouseUp={handleButtonRelease}
+              onTouchStart={() => handleButtonPress("left")}
+              onTouchEnd={handleButtonRelease}
               onClick={goToPrevSlide}
             />
           </Grid>
           <Grid item xs={5}>
             <ArrowCircleRightIcon
-              sx={{ fontSize: "60px", cursor: "pointer" }}
+              sx={{
+                fontSize: "60px",
+                cursor: "pointer",
+                color: activeButton === "right" ? "black" : "white",
+              }}
+              onMouseDown={() => handleButtonPress("right")}
+              onMouseUp={handleButtonRelease}
+              onTouchStart={() => handleButtonPress("right")}
+              onTouchEnd={handleButtonRelease}
               onClick={goToNextSlide}
             />
           </Grid>
