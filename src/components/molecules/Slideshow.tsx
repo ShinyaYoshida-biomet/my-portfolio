@@ -3,7 +3,7 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import { Container, Grid } from "@mui/material";
 
-const delay = 10000;
+const delay = 5000;
 
 export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
   const [index, setIndex] = useState(0);
@@ -44,40 +44,53 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
   };
 
   return (
-    <div className="slideshow">
+    <div
+      style={{
+        margin: "0 auto",
+        overflow: "hidden",
+        maxWidth: "500px",
+      }}
+    >
       <div
-        className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        style={{
+          transform: `translate3d(${-index * 100}%, 0, 0)`,
+          transition: "ease 1000ms",
+          whiteSpace: "nowrap",
+        }}
       >
         {children.map((child, index) => (
           <div
-            className="slide"
             key={index}
-            style={{ justifyContent: "center", alignItems: "center" }}
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              display: "inlineBlock",
+              height: "400px",
+              width: "100%",
+              borderRadius: "40px"
+            }}
           >
             {child}
           </div>
         ))}
       </div>
 
-      <Container sx={{marginTop: "3%"}}>
-      <Grid container display="spaceBetween">
-        <Grid item xs={1}>
-        </Grid>
-        <Grid item xs={5}>
-          <ArrowCircleLeftIcon
-            sx={{ fontSize: "60px" }}
-            onClick={goToPrevSlide}
-          />
-        </Grid>
-        <Grid item xs={5}>
-          <ArrowCircleRightIcon
-            sx={{ fontSize: "60px" }}
-            onClick={goToNextSlide}
-          />
-        </Grid>
-        <Grid item xs={1}>
-        </Grid>
+      <Container sx={{ marginTop: "3%" }}>
+        <Grid container display="spaceBetween">
+          <Grid item xs={1}></Grid>
+          <Grid item xs={5}>
+            <ArrowCircleLeftIcon
+              sx={{ fontSize: "60px", cursor: "pointer" }}
+              onClick={goToPrevSlide}
+            />
+          </Grid>
+          <Grid item xs={5}>
+            <ArrowCircleRightIcon
+              sx={{ fontSize: "60px", cursor: "pointer" }}
+              onClick={goToNextSlide}
+            />
+          </Grid>
+          <Grid item xs={1}></Grid>
         </Grid>
       </Container>
     </div>
