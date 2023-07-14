@@ -3,7 +3,6 @@ import WebIcon from "@mui/icons-material/Web";
 import InsightsIcon from "@mui/icons-material/Insights";
 import { Box, Grid } from "@mui/material";
 import { ExpertiseCard } from "components/molecules/ExpertiseCard";
-import "./Expertise.css";
 
 export const Expertise = () => {
   const textListLeft = [

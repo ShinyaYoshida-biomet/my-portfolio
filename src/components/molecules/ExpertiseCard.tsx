@@ -1,6 +1,5 @@
 import { Typography } from "../atoms/Typography";
 import { Box } from "@mui/material";
-import "./Expertise.css";
 
 export const ExpertiseCard = ({
   title,
@@ -61,7 +60,7 @@ export const ExpertiseCard = ({
           borderLeft: "2.5px solid darkcyan",
         }}
       >
-        <ul style={{ paddingInlineStart: "2vw", fontSize: "25px", marginTop: '0rem' }}>
+        <ul style={{ paddingInlineStart: "4vw", fontSize: "25px", marginTop: '0rem' }}>
           {textList.map((text) => (
             <li>{text}</li>
           ))}
