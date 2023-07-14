@@ -57,7 +57,8 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
       style={{
         margin: "0 auto",
         overflow: "hidden",
-        maxWidth: "500px",
+        maxWidth: "800px",
+        width: "100%",
       }}
     >
       <div
@@ -74,7 +75,7 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
               justifyContent: "center",
               alignItems: "center",
               display: "inline-block",
-              height: "400px",
+              height: "100%",
               width: "100%",
               borderRadius: "40px",
             }}
