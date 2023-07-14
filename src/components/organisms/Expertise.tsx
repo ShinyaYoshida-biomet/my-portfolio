@@ -21,7 +21,7 @@ export const Expertise = () => {
   ];
 
   return (
-    <Box>
+    <Box sx={{width: '100%'}}>
       <Typography variant="h1">My Expertise</Typography>
       <Grid
         container

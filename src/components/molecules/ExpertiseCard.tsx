@@ -30,7 +30,7 @@ export const ExpertiseCard = ({
           variant="h6"
           sx={{
             marginLeft: "1rem",
-            marginBottom: "0",
+            marginBottom: "0px",
             color: "darkCyan",
           }}
         >
@@ -43,10 +43,18 @@ export const ExpertiseCard = ({
         style={{
           fontFamily: "CustomFont",
           textAlign: "start",
-          marginLeft: "4rem",
+          position: "relative",
+          width: "90%",
+          maxHeight: "80%",
+          overflow: "auto",
+          margin: "0 0rem 0 2rem",
+          lineHeight: 2,
+          fontSize: "1.1em",
+          color: "#fff",
+          borderLeft: "2.5px solid darkcyan",
         }}
       >
-        <ul style={{ paddingInlineStart: "2vw", fontSize: "20px" }}>
+        <ul style={{ paddingInlineStart: "2vw", fontSize: "20px", marginTop: '0rem' }}>
           {textList.map((text) => (
             <li>{text}</li>
           ))}
