@@ -51,7 +51,7 @@ export const Expertise = () => {
             icon={
               <WebIcon
                 sx={{
-                  fontSize: "3rem",
+                  fontSize: "5rem",
                   marginRight: "2rem",
                 }}
               />
@@ -81,7 +81,7 @@ export const Expertise = () => {
             icon={
               <InsightsIcon
                 sx={{
-                  fontSize: "3rem",
+                  fontSize: "5rem",
                   marginRight: "2rem",
                 }}
               />

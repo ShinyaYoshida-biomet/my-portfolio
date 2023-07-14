@@ -21,7 +21,7 @@ export const ExpertiseCard = ({
         variant="h4"
         sx={{
           display: "flex",
-          alignItems: "start",
+          alignItems: "center",
           margin: "2rem auto",
           fontSize: "3rem",
         }}
