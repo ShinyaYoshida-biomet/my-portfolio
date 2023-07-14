@@ -29,13 +29,13 @@ export const Expertise = () => {
           paddingLeft: "3vw",
           paddingRight: "3vw",
           margin: "10vh auto",
-          width: "70%",
+          width: "80%",
         }}
       >
         <Grid
           item
           xs={5.5}
-          height="60vh"
+          height="70vh"
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -65,7 +65,7 @@ export const Expertise = () => {
         <Grid
           item
           xs={5.5}
-          height="60vh"
+          height="70vh"
           sx={{
             display: "flex",
             flexDirection: "column",
