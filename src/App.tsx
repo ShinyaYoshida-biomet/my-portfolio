@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
 import { Box } from "@mui/material";
-import { NameAndRole } from "./components/NameAndRole";
+import { NameAndRole } from "./components/organisms/NameAndRole";
 import { Expertise } from "./components/organisms/Expertise";
+import { Portfolio } from "./components/organisms/Portfolio";
 
 function App() {
   return (
@@ -28,6 +29,16 @@ function App() {
       }}>
           <Expertise />
       </Box>
+      <Box sx={{
+        backgroundColor: "#15202b",
+        color: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}>
+        <Portfolio />
+      </Box>      
     </Box>
   );
 }
