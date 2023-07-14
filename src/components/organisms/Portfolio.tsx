@@ -1,3 +1,4 @@
+import { useTheme } from '@mui/material/styles';
 import { Typography } from "../atoms/Typography";
 import { Box, Grid } from "@mui/material";
 import ReactPlayer from "react-player";
@@ -5,8 +6,8 @@ import { Slideshow } from "../molecules/Slideshow";
 import { CardWithMedia } from "../molecules/CardWithMedia";
 
 export const Portfolio = () => {
+  useTheme(); 
   return (
-    <Box>
       <Grid container spacing={3}>
         <Grid
           item
@@ -14,6 +15,7 @@ export const Portfolio = () => {
           sx={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "right",
             paddingBottom: "5vh",
             width: "100%",
           }}
@@ -22,13 +24,20 @@ export const Portfolio = () => {
             variant="h1"
             sx={{
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "right",
+              textAlign: "center",
               overflowWrap: "normal",
               wordWrap: "break-word",
-              fontSize: "100px",
+              fontSize: {
+                xs: '24px',  // extra-small devices
+                sm: '36px',  // small devices
+                md: '48px',  // medium devices
+                lg: '90px',  // large devices
+                xl: '120px', // extra-large devices
+              },
             }}
-          >
-            My Work
+        >
+          My Work
           </Typography>
         </Grid>
         <Grid item xs={8} sx={{ width: "100%" }}>
@@ -80,7 +89,6 @@ export const Portfolio = () => {
           ></Slideshow>
         </Grid>
       </Grid>
-    </Box>
   );
 };
 
