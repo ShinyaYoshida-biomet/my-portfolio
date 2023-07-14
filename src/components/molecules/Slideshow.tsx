@@ -75,7 +75,7 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
               justifyContent: "center",
               alignItems: "center",
               display: "inline-block",
-              height: "100%",
+              height: "80%",
               width: "100%",
               borderRadius: "40px",
             }}
