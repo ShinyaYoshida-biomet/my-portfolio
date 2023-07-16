@@ -11,15 +11,15 @@ export const CardWithMedia = ({
   description: string;
 }) => {
   return (
-    <Card sx={{ backgroundColor: "#1a2836", height: "100%" }}>
+    <Card sx={{ backgroundColor: "#1a2836", borderRadius: "10px", }}>
       <div>{child}</div>
       <CardContent
         sx={{
-          height: "30%",
+          height: "100px",
           color: "white",
           backgroundColor: "#1a2836",
           opacity: "0.9",
-          overflowY: "auto",
+          overflowY: "auto",          
         }}
       >
         <Typography variant="h4">{title}</Typography>
@@ -28,7 +28,6 @@ export const CardWithMedia = ({
           sx={{
             display: "inline-block",
             whiteSpace: "pre-line",
-            fontWeight: 'normal'
           }}
         >
           {description}
