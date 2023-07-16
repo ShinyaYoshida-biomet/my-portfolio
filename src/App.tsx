@@ -10,7 +10,7 @@ function App() {
     <Box className="App">
       <Box sx={
         {
-          backgroundColor: "#15202b",
+          // backgroundColor: "#15202b",
           color: "white",
           display: "flex",
           alignItems: "center",
@@ -20,7 +20,7 @@ function App() {
         <NameAndRole name="Shinya Yoshida" />
       </Box>
       <Box sx={{
-        backgroundColor: "#15202b",
+        // backgroundColor: "#15202b",
         color: "white",
         display: "flex",
         alignItems: "center",
@@ -30,7 +30,7 @@ function App() {
           <Expertise />
       </Box>
       <Box sx={{
-        backgroundColor: "#15202b",
+        // backgroundColor: "#15202b",
         color: "white",
         display: "flex",
         alignItems: "center",
