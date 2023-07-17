@@ -10,7 +10,6 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
   const [activeButton, setActiveButton] = useState("");
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // To disable auto slide, comment out the useEffect below
   function resetTimeout() {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -58,7 +57,7 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
         margin: "0 auto",
         overflow: "hidden",
         maxWidth: "800px",
-        width: "100%",
+        width: "80%",
         borderRadius: "10px",
       }}
     >
