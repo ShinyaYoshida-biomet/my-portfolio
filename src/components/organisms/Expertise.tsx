@@ -3,6 +3,7 @@ import WebIcon from "@mui/icons-material/Web";
 import InsightsIcon from "@mui/icons-material/Insights";
 import { Box, Grid } from "@mui/material";
 import { ExpertiseCard } from "components/molecules/ExpertiseCard";
+import { HtmlCode } from "components/molecules/HtmlCode";
 
 export const Expertise = () => {
   const textListLeft = [
@@ -20,7 +21,19 @@ export const Expertise = () => {
   ];
 
   return (
-    <Box sx={{width: '100%'}}>
+    <Box sx={{ width: "100%" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          position: "absolute",
+          top: "180%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <HtmlCode />
+      </div>
       <Typography variant="h1">My Expertise</Typography>
       <Grid
         container
@@ -29,6 +42,7 @@ export const Expertise = () => {
           paddingRight: "3vw",
           margin: "10vh auto",
           width: "80%",
+          position: "relative",
         }}
       >
         <Grid
