@@ -21,7 +21,7 @@ export const NameAndRole = ({ name }: { name: string }) => {
         const keyframes = [{ opacity: "0" }, { opacity: "1" }];
         const fillMode: FillMode = "both";
         const options = {
-          delay: i * 50,
+          delay: i * 100,
           duration: 500,
           fill: fillMode,
         };
@@ -76,10 +76,9 @@ export const NameAndRole = ({ name }: { name: string }) => {
             </Typography>
           )}
         </Box>
-        <Box sx={{ marginTop: "2rem" }}>
-          {isSmallScreen ? <ScrollButton scrollHeightRatio={0.6} />  :<ScrollButton scrollHeightRatio={1.1}/>}
-          
-        </Box>
+        <div style={{ marginTop: "2rem", width: '10%' }} >
+          {isSmallScreen ? <ScrollButton scrollHeightRatio={0.6} />  :<ScrollButton scrollHeightRatio={1.1}/>}          
+        </div>
       </Container>
     </>
   );
