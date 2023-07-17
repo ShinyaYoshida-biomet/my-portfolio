@@ -67,17 +67,7 @@ export const ExpertiseCard = ({
           color: "#fff",
           borderLeft: "2.5px solid darkcyan",
         }}
-      >
-        {/* <ul
-          style={{            
-            paddingInlineStart: "4vw",
-            marginTop: "0rem",
-          }}
-        >
-          {textList.map((text) => (
-            <li>{text}</li>
-          ))}
-        </ul> */}
+      >        
         <List
           sx={{
             fontSize: {

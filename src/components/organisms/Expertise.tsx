@@ -57,7 +57,13 @@ export const Expertise = () => {
           paddingLeft: "3vw",
           paddingRight: "3vw",
           margin: "10vh auto",
-          width: "80%",
+          width: {
+            xs: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "80%",
+            xl: "80%",
+          },
           position: "relative",
         }}
       >
@@ -74,7 +80,7 @@ export const Expertise = () => {
             borderColor: "gray",
             borderStyle: "solid",
             borderWidth: "3px",
-            marginBottom: isSmallScreen ? "20px" : "0px", // Add margin bottom on small screens
+            marginBottom: isSmallScreen ? "20px" : "0px", 
           }}
         >
           <ExpertiseCard
