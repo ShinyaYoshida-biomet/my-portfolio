@@ -3,6 +3,17 @@
   src: url('./fonts/RictyDiminished-Regular.ttf') format('truetype');
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 .App {
   background-image: linear-gradient(to bottom, #1d2d3c 0%, #15202b 50%, #0d131a 100%);
