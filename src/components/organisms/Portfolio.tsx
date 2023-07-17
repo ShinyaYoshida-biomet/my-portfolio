@@ -11,7 +11,8 @@ export const Portfolio = () => {
     <Grid container spacing={3}>
       <Grid
         item
-        xs={4}
+        xs={12}
+        sm={4}
         sx={{
           display: "flex",
           alignItems: "center",
@@ -40,7 +41,7 @@ export const Portfolio = () => {
           My Work
         </Typography>
       </Grid>
-      <Grid item xs={8} sx={{ width: "100%" }}>
+      <Grid item xs={12} sm={8} sx={{ width: "100%" }}>
         <Slideshow
           children={[
             <CardWithMedia
@@ -49,7 +50,7 @@ export const Portfolio = () => {
                   url={process.env.REACT_APP_MOVIE_URL1}
                   controls
                   width="100%"
-                  height="auto"
+                  height="100%"
                 />
               }
               title={"LP Site: One Piece Film"}
@@ -63,7 +64,7 @@ export const Portfolio = () => {
                   url={process.env.REACT_APP_MOVIE_URL2}
                   controls
                   width="100%"
-                  height="auto"
+                  height="100%"
                 />
               }
               title={"AI Powered Self PR"}
@@ -73,7 +74,7 @@ export const Portfolio = () => {
             />,
             <CardWithMedia
               child={
-                <img src="/Coming_Soon.png" alt="" width="100%" height="auto" />
+                <img src="/Coming_Soon.png" alt="" width="100%" height="100%" />
               }
               title={"Statistical Reports: Incidence rates"}
               description={
