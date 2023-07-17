@@ -19,7 +19,7 @@ export const Portfolio = () => {
           height="100%" 
         />
       }
-      title={"LP Site: One Piece Film"}
+      title={"LP: One Piece Film"}
       description={
         "I'm a great fan of Japanese manga One Piece, so I made this landing site for the new imaginary film."
       }
@@ -139,7 +139,7 @@ export const Portfolio = () => {
               alignItems: "center",
               flexDirection: "column",
               width: "80%",
-              gap: "20px", // You can adjust this value to provide the spacing you want
+              gap: "20px",
             }}
             >
               {children.map(

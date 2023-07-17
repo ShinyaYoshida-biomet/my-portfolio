@@ -26,32 +26,34 @@ export const CardWithMedia = ({
           variant="h4"
           sx={{
             fontSize: {
-              xs: "30px", // extra-small devices
-              sm: "30px", // small devices
-              md: "30px", // medium devices
-              lg: "45px", // large devices
-              xl: "45px", // extra-large devices
+              xs: "25px", // extra-small devices
+              sm: "25px", // small devices
+              md: "25px", // medium devices
+              lg: "30px", // large devices
+              xl: "30px", // extra-large devices
             },
           }}
         >
           {title}
         </Typography>
+        
         <Typography
           variant="h6"
           sx={{
             display: "inline-block",
             whiteSpace: "pre-line",
             fontWeight: 'normal',
+            textAlign: 'left',
             fontSize: {
-              xs: "20px", // extra-small devices
-              sm: "20px", // small devices
-              md: "20px", // medium devices
+              xs: "15px", // extra-small devices
+              sm: "15px", // small devices
+              md: "15px", // medium devices
               lg: "30px", // large devices
               xl: "30px", // extra-large devices
             },            
           }}
         >
-          {description}
+          &thinsp; {description}
         </Typography>
       </CardContent>
     </Card>
