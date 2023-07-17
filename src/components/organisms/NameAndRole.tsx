@@ -21,7 +21,7 @@ export const NameAndRole = ({ name }: { name: string }) => {
         const keyframes = [{ opacity: "0" }, { opacity: "1" }];
         const fillMode: FillMode = "both";
         const options = {
-          delay: i * 50,
+          delay: i * 100,
           duration: 500,
           fill: fillMode,
         };
