@@ -30,9 +30,10 @@ export const Expertise = () => {
           display: "flex",
           justifyContent: "center",
           position: "absolute",
-          top: "180%",
-          left: "50%",
+          top: isSmallScreen ? "200%" : "180%", 
+          left: "40%",
           transform: "translate(-50%, -50%)",
+          width: isSmallScreen ? "60%" : "100%",
         }}
       >
         <HtmlCode />
@@ -71,7 +72,7 @@ export const Expertise = () => {
           item
           xs={12}
           md={5.5}
-          height="70vh"
+          height={isSmallScreen ? "60vh" : "70vh"}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -102,7 +103,7 @@ export const Expertise = () => {
           item
           xs={12}
           md={5.5}
-          height="70vh"
+          height={isSmallScreen ? "60vh" : "70vh"}
           sx={{
             display: "flex",
             flexDirection: "column",
