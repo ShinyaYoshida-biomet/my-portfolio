@@ -16,26 +16,26 @@ export const CustomCursor = () => {
       }
     };
 
-    const enlargeDot = (event: Event) => {
-      if (event.target && (event.target as Element).matches(".scroll-button")) {
-        setDotSize("10px"); // Enlarge the dot
-      }
-    };
-
-    const shrinkDot = (event: Event) => {
-      if (event.target && (event.target as Element).matches(".scroll-button")) {
-        setDotSize("5px"); // Shrink the dot back down
-      }
-    };
+    const enlargeDot = () => setDotSize("10px"); // Enlarge the dot
+    const shrinkDot = () => setDotSize("5px"); // Shrink the dot back down
 
     window.addEventListener("mousemove", moveCircle);
-    window.addEventListener("mouseover", enlargeDot);
-    window.addEventListener("mouseout", shrinkDot);
+
+    const intervalId = setInterval(() => {
+      const hoverElement = document.getElementById("mouse-enlarge");
+      if (hoverElement) {
+        hoverElement.addEventListener("mouseenter", enlargeDot);
+        hoverElement.addEventListener("mouseleave", shrinkDot);
+        clearInterval(intervalId);
+      }
+    }, 100);
 
     return () => {
+      window.removeEventListener("mousemove", moveCircle);
+      clearInterval(intervalId);
     };
   }, []);
-
+  
 
   return (
     <div

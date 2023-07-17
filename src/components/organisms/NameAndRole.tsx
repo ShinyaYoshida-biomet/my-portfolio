@@ -76,10 +76,9 @@ export const NameAndRole = ({ name }: { name: string }) => {
             </Typography>
           )}
         </Box>
-        <Box sx={{ marginTop: "2rem" }}>
-          {isSmallScreen ? <ScrollButton scrollHeightRatio={0.6} />  :<ScrollButton scrollHeightRatio={1.1}/>}
-          
-        </Box>
+        <div style={{ marginTop: "2rem", }} id="mouse-enlarge">
+          {isSmallScreen ? <ScrollButton scrollHeightRatio={0.6} />  :<ScrollButton scrollHeightRatio={1.1}/>}          
+        </div>
       </Container>
     </>
   );
