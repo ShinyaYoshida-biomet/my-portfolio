@@ -2,8 +2,10 @@ import './ScrollButton.css';
 
 export const ScrollButton = () => {
   const scrollDown = () => {
-    // Scroll down by 100vh
-    window.scrollBy(0, window.innerHeight);
+    window.scrollTo({
+      top: window.innerHeight * 1.1,
+      behavior: 'smooth', // This makes the scrolling animate smoothly
+    });
   }
 
   return (
