@@ -8,7 +8,7 @@ import { CardWithMedia } from "../molecules/CardWithMedia";
 export const Portfolio = () => {
   useTheme();
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={{xl: 3, lg: 3, md: 1, sm: 1, xs: 1}} height='100%'>
       <Grid
         item
         xs={12}
@@ -19,19 +19,30 @@ export const Portfolio = () => {
           justifyContent: {
             xs: "center",
             sm: "center",
-            md: "right",
-            lg: "right",
-            xl: "right",
+            md: "flex-end",
+            lg: "flex-end",
+            xl: "flex-end",
           },
-          paddingBottom: "5vh",
-          width: "100%",
+          paddingBottom: {
+            xl: "5vh",
+            lg: "5vh",
+            md: "2vh",
+            sm: "2vh",
+            xs: "2vh",
+          },
         }}
       >
         <Typography
           variant="h1"
           sx={{
             display: "flex",
-            justifyContent: "right",
+            justifyContent: {
+              xs: "center",
+              sm: "center",
+              md: "flex-end",
+              lg: "flex-end",
+              xl: "flex-end",
+            },
             textAlign: "center",
             overflowWrap: "normal",
             wordWrap: "break-word",
