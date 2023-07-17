@@ -142,7 +142,6 @@ export const Portfolio = () => {
               gap: "20px", // You can adjust this value to provide the spacing you want
             }}
           >
-            <div>
               <CardWithMedia
                 child={
                   <ReactPlayer
@@ -157,8 +156,6 @@ export const Portfolio = () => {
                   "I'm a great fan of Japanese manga One Piece, so I made this landing site for the new imaginary film."
                 }
               />
-            </div>
-            <div>
               <CardWithMedia
                 child={
                   <ReactPlayer
@@ -173,8 +170,6 @@ export const Portfolio = () => {
                   "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
                 }
               />
-            </div>
-            <div>
               <CardWithMedia
                 child={<img src="/Coming_Soon.png" alt="" width="100%" />}
                 title={"Statistical Reports: Incidence rates"}
@@ -182,7 +177,6 @@ export const Portfolio = () => {
                   "Between men and women, is there any difference of lang cancer incidence rates?"
                 }
               />
-            </div>
           </div>
         )}
       </Grid>
