@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const CustomCursor = () => {
+  const [dotSize, setDotSize] = useState("5px"); // Initialize dot size
+
   useEffect(() => {
     const circle = document.getElementById("circle");
 
@@ -14,18 +16,32 @@ export const CustomCursor = () => {
       }
     };
 
+    const enlargeDot = (event: Event) => {
+      if (event.target && (event.target as Element).matches(".scroll-button")) {
+        setDotSize("10px"); // Enlarge the dot
+      }
+    };
+
+    const shrinkDot = (event: Event) => {
+      if (event.target && (event.target as Element).matches(".scroll-button")) {
+        setDotSize("5px"); // Shrink the dot back down
+      }
+    };
+
     window.addEventListener("mousemove", moveCircle);
+    window.addEventListener("mouseover", enlargeDot);
+    window.addEventListener("mouseout", shrinkDot);
 
     return () => {
-      window.removeEventListener("mousemove", moveCircle);
     };
   }, []);
-  
+
+
   return (
     <div
       id="circle"
       style={{
-        position: "fixed", // Notice this change from "absolute" to "fixed"
+        position: "fixed",
         height: "30px",
         width: "30px",
         borderRadius: "50%",
@@ -39,8 +55,8 @@ export const CustomCursor = () => {
       <div
         style={{
           position: "absolute",
-          height: "5px",
-          width: "5px",
+          height: dotSize, // Use state to set the dot size
+          width: dotSize, // Use state to set the dot size
           background: "#0f7f9b",
           borderRadius: "50%",
           top: "50%",
