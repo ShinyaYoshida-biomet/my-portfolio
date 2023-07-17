@@ -16,7 +16,13 @@ export const Portfolio = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "right",
+          justifyContent: {
+            xs: "center",
+            sm: "center",
+            md: "right",
+            lg: "right",
+            xl: "right",
+          },
           paddingBottom: "5vh",
           width: "100%",
         }}
@@ -30,11 +36,11 @@ export const Portfolio = () => {
             overflowWrap: "normal",
             wordWrap: "break-word",
             fontSize: {
-              xs: "24px", // extra-small devices
-              sm: "36px", // small devices
-              md: "48px", // medium devices
-              lg: "90px", // large devices
-              xl: "120px", // extra-large devices
+              xs: "70px", // extra-small devices
+              sm: "70px", // small devices
+              md: "70px", // medium devices
+              lg: "150px", // large devices
+              xl: "150px", // extra-large devices
             },
           }}
         >
