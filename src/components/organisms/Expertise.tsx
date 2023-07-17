@@ -50,7 +50,7 @@ export const Expertise = () => {
           },
         }}
       >
-        My Expertise
+        Expertise
       </Typography>
       <Grid
         container

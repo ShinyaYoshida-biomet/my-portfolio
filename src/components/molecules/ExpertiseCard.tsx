@@ -1,5 +1,5 @@
 import { Typography } from "../atoms/Typography";
-import { Box, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import { Box, List, ListItem, ListItemText } from "@mui/material";
 
 export const ExpertiseCard = ({
   title,
