@@ -22,10 +22,12 @@ export const CustomCursor = () => {
     window.addEventListener("mousemove", moveCircle);
 
     const intervalId = setInterval(() => {
-      const hoverElement = document.getElementById("mouse-enlarge");
-      if (hoverElement) {
-        hoverElement.addEventListener("mouseenter", enlargeDot);
-        hoverElement.addEventListener("mouseleave", shrinkDot);
+      const hoverElements = document.getElementsByClassName("mouse-enlarge");
+      if (hoverElements.length > 0) {
+        Array.from(hoverElements).forEach(element => {
+          element.addEventListener("mouseenter", enlargeDot);
+          element.addEventListener("mouseleave", shrinkDot);
+        });
         clearInterval(intervalId);
       }
     }, 100);
@@ -35,6 +37,7 @@ export const CustomCursor = () => {
       clearInterval(intervalId);
     };
   }, []);
+
   
 
   return (

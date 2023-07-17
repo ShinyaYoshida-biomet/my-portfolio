@@ -89,6 +89,7 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
           <Grid item xs={1}></Grid>
           <Grid item xs={5}>
             <ArrowCircleLeftIcon
+              className="mouse-enlarge"
               sx={{
                 fontSize: "60px",
                 cursor: "pointer",
@@ -103,6 +104,7 @@ export const Slideshow = ({ children }: { children: React.ReactNode[] }) => {
           </Grid>
           <Grid item xs={5}>
             <ArrowCircleRightIcon
+              className="mouse-enlarge"
               sx={{
                 fontSize: "60px",
                 cursor: "pointer",
