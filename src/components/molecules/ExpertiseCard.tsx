@@ -67,29 +67,36 @@ export const ExpertiseCard = ({
           color: "#fff",
           borderLeft: "2.5px solid darkcyan",
         }}
-      >        
+      >
         <List
           sx={{
-            fontSize: {
-              xs: "15px", // extra-small devices
-              sm: "15px", // small devices
-              md: "15px", // medium devices
-              lg: "30px", // large devices
-              xl: "30px", // extra-large devices
-            }, // Responsive font size
             paddingInlineStart: {
               xs: "1vw",
               sm: "1vw",
               md: "2vw",
-              lg: "4vw",              
-              xl: "4vw"
+              lg: "4vw",
+              xl: "4vw",
             },
             marginTop: "0rem",
           }}
         >
           {textList.map((text) => (
             <ListItem>
-              <ListItemText>・{text}</ListItemText>
+              <ListItemText
+                disableTypography
+                sx={{
+                  fontSize: {
+                    xs: "15px", // extra-small devices
+                    sm: "15px", // small devices
+                    md: "20px", // medium devices
+                    lg: "20px", // large devices
+                    xl: "20px", // extra-large devices
+                  },
+                  fontFamily: "CustomFont",
+                }}
+              >
+                ・{text}
+              </ListItemText>
             </ListItem>
           ))}
         </List>
