@@ -1,9 +1,9 @@
 import './ScrollButton.css';
 
-export const ScrollButton = () => {
+export const ScrollButton = ({ scrollHeightRatio }: { scrollHeightRatio: number}) => {
   const scrollDown = () => {
     window.scrollTo({
-      top: window.innerHeight * 1.1,
+      top: window.innerHeight * scrollHeightRatio,
       behavior: 'smooth', // This makes the scrolling animate smoothly
     });
   }

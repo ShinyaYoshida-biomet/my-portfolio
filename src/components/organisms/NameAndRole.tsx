@@ -77,7 +77,8 @@ export const NameAndRole = ({ name }: { name: string }) => {
           )}
         </Box>
         <Box sx={{ marginTop: "2rem" }}>
-          <ScrollButton />
+          {isSmallScreen ? <ScrollButton scrollHeightRatio={0.6} />  :<ScrollButton scrollHeightRatio={1.1}/>}
+          
         </Box>
       </Container>
     </>
