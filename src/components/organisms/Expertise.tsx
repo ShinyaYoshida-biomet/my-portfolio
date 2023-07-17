@@ -3,51 +3,7 @@ import WebIcon from "@mui/icons-material/Web";
 import InsightsIcon from "@mui/icons-material/Insights";
 import { Box, Grid } from "@mui/material";
 import { ExpertiseCard } from "components/molecules/ExpertiseCard";
-
-const HtmlCode = () => {
-  return (
-    <pre style={{ textAlign: "left" }}>
-      <code>
-        &lt;html lang="en"&gt;
-        <br />
-        &nbsp;&nbsp;&lt;head name="viewport" content="device-width"
-        initial-scale="1.0"&gt;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt; What I do for work &lt;/title&gt;
-        <br />
-        &nbsp;&nbsp;&lt;/head&gt;
-        <br />
-        &nbsp;&nbsp;&lt;body&gt;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Frontend development is really
-        exciting!
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maybe I should learn more about
-        mobile app and backend development too.
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oops! Almost forgot to say "Hello
-        World!"
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
-        <br />
-        &nbsp;&nbsp;&lt;/body&gt;
-        <br />
-        &lt;/html&gt;
-        <br />
-      </code>
-    </pre>
-  );
-};
+import { HtmlCode } from "components/molecules/HtmlCode";
 
 export const Expertise = () => {
   const textListLeft = [
@@ -66,8 +22,16 @@ export const Expertise = () => {
 
   return (
     <Box sx={{ width: "100%" }}>
-      
-      <div style={{display: 'flex', justifyContent: 'center'}}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          position: "absolute",
+          top: "180%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
         <HtmlCode />
       </div>
       <Typography variant="h1">My Expertise</Typography>
@@ -78,6 +42,7 @@ export const Expertise = () => {
           paddingRight: "3vw",
           margin: "10vh auto",
           width: "80%",
+          position: "relative",
         }}
       >
         <Grid
