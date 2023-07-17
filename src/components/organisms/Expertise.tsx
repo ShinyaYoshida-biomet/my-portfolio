@@ -31,7 +31,7 @@ export const Expertise = () => {
           justifyContent: "center",
           position: "absolute",
           top: isSmallScreen ? "200%" : "180%", 
-          left: "40%",
+          left: isSmallScreen ? "40%" : "70%", 
           transform: "translate(-50%, -50%)",
           width: isSmallScreen ? "60%" : "100%",
         }}
