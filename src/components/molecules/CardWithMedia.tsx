@@ -11,7 +11,7 @@ export const CardWithMedia = ({
   description: string;
 }) => {
   return (
-    <Card sx={{ backgroundColor: "#1a2836", borderRadius: "10px", }}>
+    <Card sx={{ backgroundColor: "#1a2836", borderRadius: "10px" }}>
       <div>{child}</div>
       <CardContent
         sx={{
@@ -19,18 +19,41 @@ export const CardWithMedia = ({
           color: "white",
           backgroundColor: "#1a2836",
           opacity: "0.9",
-          overflowY: "auto",          
+          overflowY: "auto",
         }}
       >
-        <Typography variant="h4">{title}</Typography>
+        <Typography
+          variant="h4"
+          sx={{
+            fontSize: {
+              xs: "25px", // extra-small devices
+              sm: "25px", // small devices
+              md: "25px", // medium devices
+              lg: "30px", // large devices
+              xl: "30px", // extra-large devices
+            },
+          }}
+        >
+          {title}
+        </Typography>
+        
         <Typography
           variant="h6"
           sx={{
             display: "inline-block",
             whiteSpace: "pre-line",
+            fontWeight: 'normal',
+            textAlign: 'left',
+            fontSize: {
+              xs: "15px", // extra-small devices
+              sm: "15px", // small devices
+              md: "15px", // medium devices
+              lg: "30px", // large devices
+              xl: "30px", // extra-large devices
+            },            
           }}
         >
-          {description}
+          &thinsp; {description}
         </Typography>
       </CardContent>
     </Card>

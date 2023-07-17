@@ -1,10 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import { ScrollButton } from "../atoms/ScrollButton/ScrollButton";
 
-export const NameAndRole = ({ name }: { name: string }) => {  
+export const NameAndRole = ({ name }: { name: string }) => {
   const nameRef = useRef<(HTMLSpanElement | null)[]>([]);
-
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     name.split("").forEach((_, i) => {
@@ -12,9 +19,9 @@ export const NameAndRole = ({ name }: { name: string }) => {
       if (el) {
         el.style.opacity = "0";
         const keyframes = [{ opacity: "0" }, { opacity: "1" }];
-        const fillMode: FillMode = 'both'
+        const fillMode: FillMode = "both";
         const options = {
-          delay: i * 50, // Adjust delay as needed
+          delay: i * 50,
           duration: 500,
           fill: fillMode,
         };
@@ -34,11 +41,11 @@ export const NameAndRole = ({ name }: { name: string }) => {
           marginBottom: "10rem",
         }}
       >
-        <div style={{ margin: "2rem auto" }}>
+        <Box sx={{ margin: "2rem auto" }}>
           <Typography
             variant="h1"
             fontFamily={"CustomFont"}
-            sx={{ fontSize: "150px" }}
+            sx={{ fontSize: isSmallScreen ? "70px" : "150px" }}
           >
             {name.split("").map((char, i) => (
               <span ref={(el) => (nameRef.current[i] = el)} key={i}>
@@ -46,20 +53,32 @@ export const NameAndRole = ({ name }: { name: string }) => {
               </span>
             ))}
           </Typography>
-        </div>
+        </Box>
 
-        <div style={{ margin: "2rem auto" }}>
-          <Typography
-            variant="h4"
-            fontWeight={"bold"}
-            fontFamily={"CustomFont"}
-          >
-            WEB APP DEVELOPER / AI ENGINEER.
-          </Typography>
-        </div>
-        <Box style={{ marginTop: "2rem" }}>
-          {/* To Do あとで心地よい感じにmarginを変える */}
-          <ScrollButton />
+        <Box sx={{ margin: "2rem auto" }}>
+          {isSmallScreen ? (
+            <Typography
+              variant="h4"
+              fontWeight={"bold"}
+              fontFamily={"CustomFont"}
+            >
+              WEB APP DEVELOPER
+              <br />
+              AI ENGINEER
+            </Typography>
+          ) : (
+            <Typography
+              variant="h4"
+              fontWeight={"bold"}
+              fontFamily={"CustomFont"}
+            >
+              WEB APP DEVELOPER / AI ENGINEER.
+            </Typography>
+          )}
+        </Box>
+        <Box sx={{ marginTop: "2rem" }}>
+          {isSmallScreen ? <ScrollButton scrollHeightRatio={0.6} />  :<ScrollButton scrollHeightRatio={1.1}/>}
+          
         </Box>
       </Container>
     </>

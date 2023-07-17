@@ -1,5 +1,5 @@
 import { Typography } from "../atoms/Typography";
-import { Box } from "@mui/material";
+import { Box, List, ListItem, ListItemText } from "@mui/material";
 
 export const ExpertiseCard = ({
   title,
@@ -11,19 +11,27 @@ export const ExpertiseCard = ({
   icon: React.ReactNode;
 }) => {
   return (
-    <Box sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between', // Add this
-      height: '100%', // Make sure to fill the height
-    }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between", // Add this
+        height: "100%", // Make sure to fill the height
+      }}
+    >
       <Typography
         variant="h4"
         sx={{
           display: "flex",
           alignItems: "center",
           margin: "2rem auto",
-          fontSize: "3rem",
+          fontSize: {
+            xs: "35px", // extra-small devices
+            sm: "35px", // small devices
+            md: "35px", // medium devices
+            lg: "50px", // large devices
+            xl: "50px", // extra-large devices
+          }, // Responsive font size
         }}
       >
         {icon}
@@ -49,7 +57,7 @@ export const ExpertiseCard = ({
           fontFamily: "CustomFont",
           textAlign: "start",
           position: "relative",
-          height: '100%',
+          height: "100%",
           width: "90%",
           maxHeight: "80%",
           overflow: "auto",
@@ -59,12 +67,32 @@ export const ExpertiseCard = ({
           color: "#fff",
           borderLeft: "2.5px solid darkcyan",
         }}
-      >
-        <ul style={{ paddingInlineStart: "4vw", fontSize: "25px", marginTop: '0rem' }}>
+      >        
+        <List
+          sx={{
+            fontSize: {
+              xs: "15px", // extra-small devices
+              sm: "15px", // small devices
+              md: "15px", // medium devices
+              lg: "30px", // large devices
+              xl: "30px", // extra-large devices
+            }, // Responsive font size
+            paddingInlineStart: {
+              xs: "1vw",
+              sm: "1vw",
+              md: "2vw",
+              lg: "4vw",              
+              xl: "4vw"
+            },
+            marginTop: "0rem",
+          }}
+        >
           {textList.map((text) => (
-            <li>{text}</li>
+            <ListItem>
+              <ListItemText>・{text}</ListItemText>
+            </ListItem>
           ))}
-        </ul>
+        </List>
       </blockquote>
 
       <div style={{ alignSelf: "start" }}>
