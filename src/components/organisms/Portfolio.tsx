@@ -4,11 +4,18 @@ import { Grid } from "@mui/material";
 import ReactPlayer from "react-player";
 import { Slideshow } from "../molecules/Slideshow";
 import { CardWithMedia } from "../molecules/CardWithMedia";
+import { useMediaQuery } from "@mui/material";
 
 export const Portfolio = () => {
-  useTheme();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  // useTheme();
   return (
-    <Grid container spacing={{xl: 3, lg: 3, md: 1, sm: 1, xs: 1}} height='100%'>
+    <Grid
+      container
+      spacing={{ xl: 3, lg: 3, md: 1, sm: 1, xs: 1 }}
+      height="100%"
+    >
       <Grid
         item
         xs={12}
@@ -59,47 +66,92 @@ export const Portfolio = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} sm={8} sx={{ width: "100%" }}>
-        <Slideshow
-          children={[
+        {!isSmallScreen ? (
+          <Slideshow
+            children={[
+              <CardWithMedia
+                child={
+                  <ReactPlayer
+                    url={process.env.REACT_APP_MOVIE_URL1}
+                    controls
+                    width="100%"
+                    height="100%"
+                  />
+                }
+                title={"LP Site: One Piece Film"}
+                description={
+                  "I'm a great fan of Japanese manga One Piece, so I made this landing site for the new imaginary film."
+                }
+              />,
+              <CardWithMedia
+                child={
+                  <ReactPlayer
+                    url={process.env.REACT_APP_MOVIE_URL2}
+                    controls
+                    width="100%"
+                    height="100%"
+                  />
+                }
+                title={"AI Powered Self PR"}
+                description={
+                  "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
+                }
+              />,
+              <CardWithMedia
+                child={
+                  <img
+                    src="/Coming_Soon.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                }
+                title={"Statistical Reports: Incidence rates"}
+                description={
+                  "Between men and women, is there any difference of lang cancer incidence rates?"
+                }
+              />,
+            ]}
+          ></Slideshow>
+        ) : (
+          <div
+            style={{ display: "flex", justifyContent: "center", width: "80%" }}
+          >
             <CardWithMedia
               child={
                 <ReactPlayer
                   url={process.env.REACT_APP_MOVIE_URL1}
                   controls
                   width="100%"
-                  height="100%"
                 />
               }
               title={"LP Site: One Piece Film"}
               description={
                 "I'm a great fan of Japanese manga One Piece, so I made this landing site for the new imaginary film."
               }
-            />,
+            />
             <CardWithMedia
               child={
                 <ReactPlayer
                   url={process.env.REACT_APP_MOVIE_URL2}
                   controls
                   width="100%"
-                  height="100%"
                 />
               }
               title={"AI Powered Self PR"}
               description={
                 "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
               }
-            />,
+            />
             <CardWithMedia
-              child={
-                <img src="/Coming_Soon.png" alt="" width="100%" height="100%" />
-              }
+              child={<img src="/Coming_Soon.png" alt="" width="100%" />}
               title={"Statistical Reports: Incidence rates"}
               description={
                 "Between men and women, is there any difference of lang cancer incidence rates?"
               }
-            />,
-          ]}
-        ></Slideshow>
+            />
+          </div>
+        )}
       </Grid>
     </Grid>
   );
