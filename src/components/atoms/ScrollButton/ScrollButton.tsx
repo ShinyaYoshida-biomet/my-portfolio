@@ -15,15 +15,17 @@ export const ScrollButton = ({
   };
 
   return (
-    <div
-      className={"scroll-button"}
-      onClick={scrollDown}
-      style={{ fontFamily: "CustomFont" }}
-    >
-      <span className="mouse">
-        <span></span>
-      </span>
-      Scroll Down
+    <div style={{display: 'flex', 'justifyContent': "center", width: '20%'}}>
+      <div
+        className={"scroll-button"}
+        onClick={scrollDown}
+        style={{ fontFamily: "CustomFont" }}
+      >
+        <span className="mouse">
+          <span></span>
+        </span>
+        Scroll Down
+      </div>
     </div>
   );
 };

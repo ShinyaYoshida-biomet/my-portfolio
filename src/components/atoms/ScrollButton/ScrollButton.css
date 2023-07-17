@@ -58,10 +58,11 @@ p {
 }
  .scroll-button {
 	display: block;
-	position: absolute;
+	/* position: absolute; */
 	left: 0;
 	right: 0;
 	text-align: center;
+	width: 200px;
 }
 .scroll-button > * {
 	display: inline-block;

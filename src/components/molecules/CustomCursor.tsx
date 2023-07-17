@@ -22,7 +22,8 @@ export const CustomCursor = () => {
     window.addEventListener("mousemove", moveCircle);
 
     const intervalId = setInterval(() => {
-      const hoverElements = document.getElementsByClassName("mouse-enlarge");
+      // const hoverElements = document.getElementsByClassName("mouse-enlarge");
+      const hoverElements = document.querySelectorAll('.mouse-enlarge, .scroll-button'); 
       if (hoverElements.length > 0) {
         Array.from(hoverElements).forEach(element => {
           element.addEventListener("mouseenter", enlargeDot);
