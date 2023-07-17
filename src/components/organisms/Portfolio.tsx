@@ -65,7 +65,24 @@ export const Portfolio = () => {
           My Work
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={8} sx={{ width: "100%" }}>
+      <Grid item xs={12} sm={8} sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: {
+          xs: "center",
+          sm: "center",
+          md: "flex-end",
+          lg: "flex-end",
+          xl: "flex-end",
+        },
+        paddingBottom: {
+          xl: "5vh",
+          lg: "5vh",
+          md: "2vh",
+          sm: "2vh",
+          xs: "2vh",
+        },
+      }}>
         {!isSmallScreen ? (
           <Slideshow
             children={[
@@ -115,41 +132,57 @@ export const Portfolio = () => {
           ></Slideshow>
         ) : (
           <div
-            style={{ display: "flex", justifyContent: "center", width: "80%" }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              width: "80%",
+              gap: "20px", // You can adjust this value to provide the spacing you want
+            }}
           >
-            <CardWithMedia
-              child={
-                <ReactPlayer
-                  url={process.env.REACT_APP_MOVIE_URL1}
-                  controls
-                  width="100%"
-                />
-              }
-              title={"LP Site: One Piece Film"}
-              description={
-                "I'm a great fan of Japanese manga One Piece, so I made this landing site for the new imaginary film."
-              }
-            />
-            <CardWithMedia
-              child={
-                <ReactPlayer
-                  url={process.env.REACT_APP_MOVIE_URL2}
-                  controls
-                  width="100%"
-                />
-              }
-              title={"AI Powered Self PR"}
-              description={
-                "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
-              }
-            />
-            <CardWithMedia
-              child={<img src="/Coming_Soon.png" alt="" width="100%" />}
-              title={"Statistical Reports: Incidence rates"}
-              description={
-                "Between men and women, is there any difference of lang cancer incidence rates?"
-              }
-            />
+            <div>
+              <CardWithMedia
+                child={
+                  <ReactPlayer
+                    url={process.env.REACT_APP_MOVIE_URL1}
+                    controls
+                    width="100%"
+                    height="100%" // Set height to 100%
+                  />
+                }
+                title={"LP Site: One Piece Film"}
+                description={
+                  "I'm a great fan of Japanese manga One Piece, so I made this landing site for the new imaginary film."
+                }
+              />
+            </div>
+            <div>
+              <CardWithMedia
+                child={
+                  <ReactPlayer
+                    url={process.env.REACT_APP_MOVIE_URL2}
+                    controls
+                    width="100%"
+                    height="100%" // Set height to 100%
+                  />
+                }
+                title={"AI Powered Self PR"}
+                description={
+                  "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
+                }
+              />
+            </div>
+            <div>
+              <CardWithMedia
+                child={<img src="/Coming_Soon.png" alt="" width="100%" />}
+                title={"Statistical Reports: Incidence rates"}
+                description={
+                  "Between men and women, is there any difference of lang cancer incidence rates?"
+                }
+              />
+            </div>
           </div>
         )}
       </Grid>
