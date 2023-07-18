@@ -1,24 +1,19 @@
 import "./App.css";
-import { Box } from "@mui/material";
 import { NameAndRole } from "./components/organisms/NameAndRole";
 import { Expertise } from "./components/organisms/Expertise";
 import { Portfolio } from "./components/organisms/Portfolio";
 import { CustomCursor } from "./components/molecules/CustomCursor";
-
+import { Box, useTheme, useMediaQuery } from "@mui/material";
 
 function App() {
-  let circle = document.getElementById("circle");
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  
   return (
     <Box
       className="App"
-      onMouseMoveCapture={(e) => {
-        if (circle) {
-          circle.style.left = e.pageX + "px";
-          circle.style.top = e.pageY + "px";
-        }
-      }}
     >
-      <CustomCursor />
+      <CustomCursor isSmallScreen={isSmallScreen} />
       <Box
         sx={{
           color: "white",
@@ -27,7 +22,7 @@ function App() {
           minHeight: "100vh",
         }}
       >
-        <NameAndRole name="Shinya Yoshida" />
+        <NameAndRole name="Shinya Yoshida" isSmallScreen={isSmallScreen} />
       </Box>
       <Box
         sx={{
@@ -38,7 +33,7 @@ function App() {
           minHeight: "100vh",
         }}
       >
-        <Expertise />
+        <Expertise isSmallScreen={isSmallScreen} />
       </Box>
       <Box
         sx={{
@@ -49,7 +44,7 @@ function App() {
           minHeight: "100vh",
         }}
       >
-        <Portfolio />
+        <Portfolio isSmallScreen={isSmallScreen}  />
       </Box>
     </Box>
   );
