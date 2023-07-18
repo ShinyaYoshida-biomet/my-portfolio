@@ -15,7 +15,7 @@ export const CardWithMedia = ({
       <div>{child}</div>
       <CardContent
         sx={{
-          height: "100px",
+          height: "150px",
           color: "white",
           backgroundColor: "#1a2836",
           opacity: "0.9",
@@ -48,8 +48,8 @@ export const CardWithMedia = ({
               xs: "15px", // extra-small devices
               sm: "15px", // small devices
               md: "15px", // medium devices
-              lg: "30px", // large devices
-              xl: "30px", // extra-large devices
+              lg: "20px", // large devices
+              xl: "20px", // extra-large devices
             },            
           }}
         >
