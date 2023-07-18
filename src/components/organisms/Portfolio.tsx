@@ -21,7 +21,8 @@ export const Portfolio = () => {
       }
       title={"LP: One Piece Film"}
       description={
-        "I'm a great fan of Japanese manga One Piece, so I made this landing site for the new imaginary film."
+        "I'm a great fan of Japanese manga, One Piece, so I made this landing site for the new imaginary film." +
+        "This is an imaginary story of the film, so please don't expect the real film."
       }
     />,
     <CardWithMedia
@@ -42,7 +43,8 @@ export const Portfolio = () => {
       child={<img src="/Coming_Soon.png" alt="" width="100%" />}
       title={"Statistical Reports: Incidence rates"}
       description={
-        "Between men and women, is there any difference of lang cancer incidence rates?"
+        "Between men and women, is there any difference of lang cancer incidence rates?"+
+        "This is a report to statistically validate the hypothesis."
       }
     />,
   ];

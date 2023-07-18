@@ -30,10 +30,12 @@ export const Expertise = () => {
           display: "flex",
           justifyContent: "center",
           position: "absolute",
-          top: isSmallScreen ? "200%" : "180%", 
-          left: isSmallScreen ? "40%" : "70%", 
+          top: isSmallScreen ? "170%" : "180%", 
+          marginLeft: isSmallScreen ? "30%" : "50%",
+          marginRight: isSmallScreen ? "30%" : "50%",
           transform: "translate(-50%, -50%)",
-          width: isSmallScreen ? "60%" : "100%",
+          maxWidth: isSmallScreen ? "60%" : "100%",
+          width: isSmallScreen ? "auto" : "60%",
         }}
       >
         <HtmlCode />
