@@ -33,7 +33,8 @@ export const Expertise = () => {
           top: isSmallScreen ? "200%" : "180%", 
           left: isSmallScreen ? "40%" : "70%", 
           transform: "translate(-50%, -50%)",
-          width: isSmallScreen ? "60%" : "100%",
+          maxWidth: isSmallScreen ? "60%" : "100%",
+          width: isSmallScreen ? "auto" : "30%",
         }}
       >
         <HtmlCode />
