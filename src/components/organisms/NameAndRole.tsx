@@ -1,17 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import {
-  Box,
-  Container,
-  Typography,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { ScrollButton } from "../atoms/ScrollButton/ScrollButton";
 
-export const NameAndRole = ({ name }: { name: string }) => {
+export const NameAndRole = ({
+  name,
+  isSmallScreen,
+}: {
+  name: string;
+  isSmallScreen: boolean;
+}) => {
   const nameRef = useRef<(HTMLSpanElement | null)[]>([]);
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     name.split("").forEach((_, i) => {
@@ -76,8 +74,12 @@ export const NameAndRole = ({ name }: { name: string }) => {
             </Typography>
           )}
         </Box>
-        <div style={{ marginTop: "2rem", width: '10%' }} >
-          {isSmallScreen ? <ScrollButton scrollHeightRatio={0.6} />  :<ScrollButton scrollHeightRatio={1.1}/>}          
+        <div style={{ marginTop: "2rem", width: "10%" }}>
+          {isSmallScreen ? (
+            <ScrollButton scrollHeightRatio={0.6} />
+          ) : (
+            <ScrollButton scrollHeightRatio={1.1} />
+          )}
         </div>
       </Container>
     </>

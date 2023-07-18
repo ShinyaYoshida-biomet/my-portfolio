@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const CustomCursor = () => {
+export const CustomCursor = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
   const [dotSize, setDotSize] = useState("5px"); // Initialize dot size
 
   useEffect(() => {
@@ -23,9 +23,11 @@ export const CustomCursor = () => {
 
     const intervalId = setInterval(() => {
       // const hoverElements = document.getElementsByClassName("mouse-enlarge");
-      const hoverElements = document.querySelectorAll('.mouse-enlarge, .scroll-button'); 
+      const hoverElements = document.querySelectorAll(
+        ".mouse-enlarge, .scroll-button"
+      );
       if (hoverElements.length > 0) {
-        Array.from(hoverElements).forEach(element => {
+        Array.from(hoverElements).forEach((element) => {
           element.addEventListener("mouseenter", enlargeDot);
           element.addEventListener("mouseleave", shrinkDot);
         });
@@ -39,9 +41,7 @@ export const CustomCursor = () => {
     };
   }, []);
 
-  
-
-  return (
+  return !isSmallScreen ? (
     <div
       id="circle"
       style={{
@@ -69,5 +69,5 @@ export const CustomCursor = () => {
         }}
       ></div>
     </div>
-  );
+  ) : null;
 };

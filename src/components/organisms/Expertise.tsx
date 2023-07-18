@@ -1,14 +1,11 @@
 import { Typography } from "../atoms/Typography";
 import WebIcon from "@mui/icons-material/Web";
 import InsightsIcon from "@mui/icons-material/Insights";
-import { Box, Grid, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { ExpertiseCard } from "components/molecules/ExpertiseCard";
 import { HtmlCode } from "components/molecules/HtmlCode";
 
-export const Expertise = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
-
+export const Expertise = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
   const textListLeft = [
     "Passionate about UI/UX.",
     "Over 3 years of Web development experience.",

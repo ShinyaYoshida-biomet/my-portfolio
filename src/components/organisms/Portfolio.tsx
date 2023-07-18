@@ -1,14 +1,11 @@
-import { useTheme } from "@mui/material/styles";
 import { Typography } from "../atoms/Typography";
 import { Grid } from "@mui/material";
 import ReactPlayer from "react-player";
 import { Slideshow } from "../molecules/Slideshow";
 import { CardWithMedia } from "../molecules/CardWithMedia";
-import { useMediaQuery } from "@mui/material";
 
-export const Portfolio = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
   const children = [
     <CardWithMedia
       child={
