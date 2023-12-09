@@ -84,7 +84,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           }}
         >
           <Link
-            href="#"
+            href={process.env.REACT_APP_INSTAGRAM_URL}
             color="inherit"
             sx={{
               display: "flex",
@@ -99,7 +99,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             <Typography sx={{marginLeft: "10px"}}>Instagram</Typography>
           </Link>
           <Link
-            href="#"
+            href={process.env.REACT_APP_LINKEDIN_URL}
             color="inherit"
             sx={{
               display: "flex",
@@ -114,7 +114,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             <Typography sx={{ marginLeft: "10px" }}>LinkedIn</Typography>
           </Link>
           <Link
-            href="#"
+            href={process.env.REACT_APP_WHATSAPP_URL}
             color="inherit"
             sx={{
               display: "flex",
