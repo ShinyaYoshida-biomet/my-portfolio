@@ -2,17 +2,19 @@ import { Typography } from "@mui/material";
 
 export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
   return (
+    // mobileの場合は後で縦に並べ直すか。
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
+        padding: "3vw 0"
       }}
     >
       <div
         style={{
-          width: "70%",
+          width: "50%",
           display: "flex",
           justifyContent: "start",
           alignItems: "center",
@@ -32,9 +34,26 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
         >
           Let's start <br />
           historical projects <br />
-          together
-          <br />
+          with me!! <br />
         </Typography>
+      </div>
+      <div
+        style={{
+          width: "30%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src={process.env.REACT_APP_MY_ICON}
+          alt="myIcon"
+          style={{
+            height: "350px",
+            width: "350px",
+            borderRadius: "50%",
+          }}
+        />
       </div>
     </div>
   );
