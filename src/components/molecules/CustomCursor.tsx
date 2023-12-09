@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 
 export const CustomCursor = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
   const [dotSize, setDotSize] = useState("5px"); // Initialize dot size
+  const changeCursorColor = (color: string) => {
+    const circle = document.getElementById("circle");
+    if (circle) {
+      circle.style.borderColor = color; // カーソルの枠線の色を変更
+    }
+  };
 
   useEffect(() => {
     const circle = document.getElementById("circle");
@@ -15,6 +21,11 @@ export const CustomCursor = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
         circle.style.top = `${y}px`;
       }
     };
+    const hoverElements = document.querySelectorAll(".mouse-enlarge");
+    hoverElements.forEach((element) => {
+      element.addEventListener("mouseenter", () => changeCursorColor("#F4E511")); // 黄色に変更
+      element.addEventListener("mouseleave", () => changeCursorColor("#0f7f9b")); // 元の色に戻す
+    });    
 
     const enlargeDot = () => setDotSize("10px"); // Enlarge the dot
     const shrinkDot = () => setDotSize("5px"); // Shrink the dot back down

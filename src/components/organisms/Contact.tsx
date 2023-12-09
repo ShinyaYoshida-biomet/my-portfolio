@@ -86,6 +86,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           <Link
             href={process.env.REACT_APP_INSTAGRAM_URL}
             color="inherit"
+            className="mouse-enlarge"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -103,6 +104,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           <Link
             href={process.env.REACT_APP_LINKEDIN_URL}
             color="inherit"
+            className="mouse-enlarge"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -120,6 +122,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           <Link
             href={process.env.REACT_APP_WHATSAPP_URL}
             color="inherit"
+            className="mouse-enlarge"
             sx={{
               display: "flex",
               alignItems: "center",
