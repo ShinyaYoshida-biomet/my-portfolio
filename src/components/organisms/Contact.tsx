@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
   return (
@@ -6,54 +6,129 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "start",
         width: "100%",
-        padding: "3vw 0"
       }}
     >
       <div
         style={{
-          width: "50%",
-          display: "flex",
-          justifyContent: "start",
-          alignItems: "center",
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: {
-              xs: "30px", // extra-small devices
-              sm: "35px", // small devices
-              md: "35px", // medium devices
-              lg: "75px", // large devices
-              xl: "75px", // extra-large devices
-            },
-            textAlign: "start",
-          }}
-        >
-          Let's start <br />
-          historical projects <br />
-          with me!! <br />
-        </Typography>
-      </div>
-      <div
-        style={{
-          width: "30%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          width: "100%",
+          padding: "3vw 0",
         }}
       >
-        <img
-          src={process.env.REACT_APP_MY_ICON}
-          alt="myIcon"
+        <div
           style={{
-            height: "350px",
-            width: "350px",
-            borderRadius: "50%",
+            width: "50%",
+            display: "flex",
+            justifyContent: "start",
+            alignItems: "center",
           }}
-        />
+        >
+          <Typography
+            sx={{
+              fontSize: {
+                xs: "30px", // extra-small devices
+                sm: "35px", // small devices
+                md: "35px", // medium devices
+                lg: "75px", // large devices
+                xl: "75px", // extra-large devices
+              },
+              textAlign: "start",
+            }}
+          >
+            Let's start <br />
+            historical projects <br />
+            with me!! <br />
+          </Typography>
+        </div>
+        <div
+          style={{
+            width: "30%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={process.env.REACT_APP_MY_ICON}
+            alt="myIcon"
+            style={{
+              height: "350px",
+              width: "350px",
+              borderRadius: "50%",
+            }}
+          />
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+          width: "100%",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: isSmallScreen ? "column" : "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            width: "100%",
+            padding: "2vw 0",
+          }}
+        >
+          <Link
+            href="#"
+            color="inherit"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src="instagramIcon.png" width="25px" height="auto" alt="InstagramIcon"
+              style={{ borderRadius: "20px",  }}
+            />
+            <Typography sx={{marginLeft: "10px"}}>Instagram</Typography>
+          </Link>
+          <Link
+            href="#"
+            color="inherit"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src="linkedInIcon.png" width="25px" height="auto" alt="linkedInIcon"
+              style={{ borderRadius: "20px", }}
+            />
+            <Typography sx={{ marginLeft: "10px" }}>LinkedIn</Typography>
+          </Link>
+          <Link
+            href="#"
+            color="inherit"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src="whatsAppIcon.png" width="25px" height="auto" alt="WhatsAppIcon"
+              style={{ borderRadius: "20px", }}
+            />
+            <Typography sx={{ marginLeft: "10px" }}>WhatsApp</Typography>
+          </Link>
+        </Box>
       </div>
     </div>
   );
