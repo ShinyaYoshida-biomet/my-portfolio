@@ -10,43 +10,49 @@ export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
     <CardWithMedia
       child={
         <ReactPlayer
-          url={process.env.REACT_APP_MOVIE_URL1}
+          url={process.env.REACT_APP_MOVIE_URL2}
           controls
           width="100%"
-          height="100%" 
+          height="100%"
         />
       }
-      title={"LP: One Piece Film"}
+      title={"AI Powered Self PR"}
       description={
-        "I'm a great fan of Japanese manga, One Piece, so I made this landing site for the new imaginary film." +
-        "This is an imaginary story of the film, so please don't expect the real film."
+        "This AI powered web app will help you to write your self Promotion almost automatically. You only need to remember and specify your past experiences and achievements. Mobile version and multi-language version will be available soon."
       }
     />,
     <CardWithMedia
       child={
         <ReactPlayer
-          url={process.env.REACT_APP_MOVIE_URL2}
+          url={process.env.REACT_APP_MOVIE_URL3}
           controls
           width="100%"
-          height="100%" 
+          height="100%"
         />
       }
-      title={"AI Powered Self PR"}
+      title={"Menu Helper Chat App"}
       description={
-        "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
+        "The innovative app for restaurant owners." +
+        "This app will help customers to understand what the menu is like and what the ingredients are like." +
+        "It will work not only in laptop environment but also in mobile app environment."
       }
     />,
     <CardWithMedia
-      child={<img src="/Coming_Soon.png" alt="" width="100%" />}
-      title={"Statistical Reports: Incidence rates"}
-      description={
-        "Between men and women, is there any difference of lang cancer incidence rates?"+
-        "This is a report to statistically validate the hypothesis."
+      child={
+        <ReactPlayer
+          url={process.env.REACT_APP_MOVIE_URL1}
+          controls
+          width="100%"
+          height="100%"
+        />
       }
-    />,
+      title={"LP: One Piece Film"}
+      description={
+        "Sometimes, there is a need for creating complex and animation-rich websites that can't be replicated with LowCode applications like Wordpress. As an example of such a website, I have created a landing site for a fictional movie based on the anime 'One Piece', as a tribute to this great Japanese manga."
+      }
+    />,    
   ];
 
-  // useTheme();
   return (
     <Grid
       container
