@@ -2,6 +2,7 @@ import "./App.css";
 import { NameAndRole } from "./components/organisms/NameAndRole";
 import { Expertise } from "./components/organisms/Expertise";
 import { Portfolio } from "./components/organisms/Portfolio";
+import { Contact } from "./components/organisms/Contact";
 import { CustomCursor } from "./components/molecules/CustomCursor";
 import { Box, useTheme, useMediaQuery } from "@mui/material";
 
@@ -45,6 +46,18 @@ function App() {
         }}
       >
         <Portfolio isSmallScreen={isSmallScreen}  />
+      </Box>
+      <Box
+        sx={{
+          color: "white",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "100vh",
+        }}
+      
+      >
+        <Contact isSmallScreen={isSmallScreen} />
       </Box>
     </Box>
   );
