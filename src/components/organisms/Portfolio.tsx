@@ -18,9 +18,9 @@ export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
       }
       title={"AI Powered Self PR"}
       description={
-        "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
+        "This AI powered web app will help you to write your self Promotion almost automatically. You only need to remember and specify your past experiences and achievements. Mobile version and multi-language version will be available soon."
       }
-    />,    
+    />,
     <CardWithMedia
       child={
         <ReactPlayer
@@ -32,7 +32,9 @@ export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
       }
       title={"Menu Helper Chat App"}
       description={
-        "The innovative app for restaurant owner or staffs. This app will help customers to understand what the menu is like and what the ingredients are like. It will work not only in laptop environment but also in mobile app environment."
+        "The innovative app for restaurant owners." +
+        "This app will help customers to understand what the menu is like and what the ingredients are like." +
+        "It will work not only in laptop environment but also in mobile app environment."
       }
     />,
     <CardWithMedia
@@ -46,8 +48,7 @@ export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
       }
       title={"LP: One Piece Film"}
       description={
-        "I'm a great fan of Japanese manga, One Piece, so I made this landing site for the new imaginary film." +
-        "This is an imaginary story of the film, so please don't expect the real film."
+        "Sometimes, there is a need for creating complex and animation-rich websites that can't be replicated with LowCode applications like Wordpress. As an example of such a website, I have created a landing site for a fictional movie based on the anime 'One Piece', as a tribute to this great Japanese manga."
       }
     />,    
   ];
