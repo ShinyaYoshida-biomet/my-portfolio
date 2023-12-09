@@ -37,16 +37,21 @@ export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
       }
     />,
     <CardWithMedia
-      child={<img src="/Coming_Soon.png" alt="" width="100%" />}
-      title={"Statistical Reports: Incidence rates"}
+      child={
+        <ReactPlayer
+          url={process.env.REACT_APP_MOVIE_URL3}
+          controls
+          width="100%"
+          height="100%"
+        />
+      }
+      title={"Menu Helper Chat App"}
       description={
-        "Between men and women, is there any difference of lang cancer incidence rates?"+
-        "This is a report to statistically validate the hypothesis."
+        "The innovative app for restaurant owner or staffs. This app will help customers to understand what the menu is like and what the ingredients are like. It will work not only in laptop environment but also in mobile app environment."
       }
     />,
   ];
 
-  // useTheme();
   return (
     <Grid
       container
