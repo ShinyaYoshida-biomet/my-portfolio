@@ -93,10 +93,12 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             }}
           >
             <img
-              src="instagramIcon.png" width="25px" height="auto" alt="InstagramIcon"
-              style={{ borderRadius: "20px",  }}
+              src="instagramIcon.png"
+              width={"40px"} height="auto"
+              alt="InstagramIcon"
+              style={{ borderRadius: "20px" }}
             />
-            <Typography sx={{marginLeft: "10px"}}>Instagram</Typography>
+            <Typography sx={{ marginLeft: "10px", fontSize: "30px" }}>Instagram</Typography>
           </Link>
           <Link
             href={process.env.REACT_APP_LINKEDIN_URL}
@@ -108,10 +110,12 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             }}
           >
             <img
-              src="linkedInIcon.png" width="25px" height="auto" alt="linkedInIcon"
-              style={{ borderRadius: "20px", }}
+              src="linkedInIcon.png"
+              width={"40px"} height="auto"
+              alt="linkedInIcon"
+              style={{ borderRadius: "20px" }}
             />
-            <Typography sx={{ marginLeft: "10px" }}>LinkedIn</Typography>
+            <Typography sx={{ marginLeft: "10px", fontSize: "30px" }}>LinkedIn</Typography>
           </Link>
           <Link
             href={process.env.REACT_APP_WHATSAPP_URL}
@@ -123,10 +127,12 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             }}
           >
             <img
-              src="whatsAppIcon.png" width="25px" height="auto" alt="WhatsAppIcon"
-              style={{ borderRadius: "20px", }}
+              src="whatsAppIcon.png"
+              width={"40px"} height="auto"
+              alt="WhatsAppIcon"
+              style={{ borderRadius: "20px" }}
             />
-            <Typography sx={{ marginLeft: "10px" }}>WhatsApp</Typography>
+            <Typography sx={{ marginLeft: "10px", fontSize: "30px" }}>WhatsApp</Typography>
           </Link>
         </Box>
       </div>
