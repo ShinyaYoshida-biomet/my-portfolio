@@ -10,32 +10,17 @@ export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
     <CardWithMedia
       child={
         <ReactPlayer
-          url={process.env.REACT_APP_MOVIE_URL1}
-          controls
-          width="100%"
-          height="100%" 
-        />
-      }
-      title={"LP: One Piece Film"}
-      description={
-        "I'm a great fan of Japanese manga, One Piece, so I made this landing site for the new imaginary film." +
-        "This is an imaginary story of the film, so please don't expect the real film."
-      }
-    />,
-    <CardWithMedia
-      child={
-        <ReactPlayer
           url={process.env.REACT_APP_MOVIE_URL2}
           controls
           width="100%"
-          height="100%" 
+          height="100%"
         />
       }
       title={"AI Powered Self PR"}
       description={
         "This AI powered web app will help you to write your self PR almost automatically.You only need to remember and specify your past experiences and achievements."
       }
-    />,
+    />,    
     <CardWithMedia
       child={
         <ReactPlayer
@@ -50,6 +35,21 @@ export const Portfolio = ({ isSmallScreen }: { isSmallScreen : boolean}) => {
         "The innovative app for restaurant owner or staffs. This app will help customers to understand what the menu is like and what the ingredients are like. It will work not only in laptop environment but also in mobile app environment."
       }
     />,
+    <CardWithMedia
+      child={
+        <ReactPlayer
+          url={process.env.REACT_APP_MOVIE_URL1}
+          controls
+          width="100%"
+          height="100%"
+        />
+      }
+      title={"LP: One Piece Film"}
+      description={
+        "I'm a great fan of Japanese manga, One Piece, so I made this landing site for the new imaginary film." +
+        "This is an imaginary story of the film, so please don't expect the real film."
+      }
+    />,    
   ];
 
   return (
