@@ -1,6 +1,8 @@
 import { Box, Link, Typography } from "@mui/material";
 
 export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
+  const fontSize = isSmallScreen ? "20px" : "30px";
+  const iconSize = isSmallScreen ? "30px" : "40px";
   return (
     // mobileの場合は後で縦に並べ直すか。
     <div
@@ -15,17 +17,19 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
       <div
         style={{
           display: "flex",
+          flexDirection: isSmallScreen ? "column" : "row",
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          padding: "3vw 0",
+          padding: "3vw 0",          
         }}
       >
         <div
           style={{
-            width: "50%",
+            width: isSmallScreen ? "100%" : "50%",
             display: "flex",
-            justifyContent: "start",
+            flexDirection: "column",
+            justifyContent: "center",
             alignItems: "center",
           }}
         >
@@ -38,7 +42,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
                 lg: "75px", // large devices
                 xl: "75px", // extra-large devices
               },
-              textAlign: "start",
+              textAlign: "center",
             }}
           >
             Let's start <br />
@@ -48,18 +52,20 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
         </div>
         <div
           style={{
-            width: "30%",
+            width: isSmallScreen ? "100%" : "30%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: isSmallScreen ? "10%" : "0px",
+            marginBottom: isSmallScreen ? "10%" : "0px",
           }}
         >
           <img
             src={process.env.REACT_APP_MY_ICON}
             alt="myIcon"
             style={{
-              height: "350px",
-              width: "350px",
+              maxHeight: isSmallScreen ? "160px" : "350px",
+              maxWidth: isSmallScreen ? "160px" : "350px",
               borderRadius: "50%",
             }}
           />
@@ -95,11 +101,11 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           >
             <img
               src="instagramIcon.png"
-              width={"40px"} height="auto"
+              width={iconSize} height="auto"
               alt="InstagramIcon"
               style={{ borderRadius: "20px" }}
             />
-            <Typography sx={{ marginLeft: "10px", fontSize: "30px" }}>Instagram</Typography>
+            <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>Instagram</Typography>
           </Link>
           <Link
             href={process.env.REACT_APP_LINKEDIN_URL}
@@ -113,11 +119,11 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           >
             <img
               src="linkedInIcon.png"
-              width={"40px"} height="auto"
+              width={iconSize} height="auto"
               alt="linkedInIcon"
               style={{ borderRadius: "20px" }}
             />
-            <Typography sx={{ marginLeft: "10px", fontSize: "30px" }}>LinkedIn</Typography>
+            <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>LinkedIn</Typography>
           </Link>
           <Link
             href={process.env.REACT_APP_WHATSAPP_URL}
@@ -131,11 +137,11 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           >
             <img
               src="whatsAppIcon.png"
-              width={"40px"} height="auto"
+              width={iconSize} height="auto"
               alt="WhatsAppIcon"
               style={{ borderRadius: "20px" }}
             />
-            <Typography sx={{ marginLeft: "10px", fontSize: "30px" }}>WhatsApp</Typography>
+            <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>WhatsApp</Typography>
           </Link>
         </Box>
       </div>
