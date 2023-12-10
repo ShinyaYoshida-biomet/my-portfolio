@@ -4,13 +4,12 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
   const fontSize = isSmallScreen ? "20px" : "30px";
   const iconSize = isSmallScreen ? "30px" : "40px";
   return (
-    // mobileの場合は後で縦に並べ直すか。
     <div
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "start",
+        justifyContent: isSmallScreen ? "center" : "start",
+        alignItems: isSmallScreen ? "center" : "start",
         width: "100%",
       }}
     >
@@ -31,6 +30,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginBottom: isSmallScreen ? "10%" : "0px",
           }}
         >
           <Typography
@@ -43,6 +43,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
                 xl: "75px", // extra-large devices
               },
               textAlign: "center",
+
             }}
           >
             Let's start <br />
@@ -84,7 +85,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
             width: "100%",
             display: "flex",
             justifyContent: "center",
-            margin: "0 auto",
+            margin: isSmallScreen ? "10% auto" : "0px",
           }}
         >
           <Box
@@ -115,7 +116,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
                 alt="InstagramIcon"
                 style={{ borderRadius: "20px" }}
               />
-              <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>
+              <Typography sx={{ marginLeft: "15px", fontSize: fontSize }}>
                 Instagram
               </Typography>
             </Link>
@@ -136,7 +137,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
                 alt="linkedInIcon"
                 style={{ borderRadius: "20px" }}
               />
-              <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>
+              <Typography sx={{ marginLeft: "15px", fontSize: fontSize }}>
                 LinkedIn
               </Typography>
             </Link>
@@ -157,7 +158,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
                 alt="WhatsAppIcon"
                 style={{ borderRadius: "20px" }}
               />
-              <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>
+              <Typography sx={{ marginLeft: "15px", fontSize: fontSize }}>
                 WhatsApp
               </Typography>
             </Link>
