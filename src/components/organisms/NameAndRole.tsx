@@ -36,7 +36,7 @@ export const NameAndRole = ({
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
-          marginBottom: "10rem",          
+          marginBottom: isSmallScreen ? "10rem" : "3vh",          
         }}
       >
         <Box sx={{ margin: "2rem auto" }}>

@@ -42,7 +42,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
                 lg: "75px", // large devices
                 xl: "75px", // extra-large devices
               },
-              textAlign: "center",
+              textAlign: isSmallScreen ? "center" : "start",
 
             }}
           >
