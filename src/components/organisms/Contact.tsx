@@ -21,7 +21,7 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          padding: "3vw 0",          
+          padding: "3vw 0",
         }}
       >
         <div
@@ -79,71 +79,90 @@ export const Contact = ({ isSmallScreen }: { isSmallScreen: boolean }) => {
           width: "100%",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: isSmallScreen ? "column" : "row",
-            justifyContent: "space-evenly",
-            alignItems: "center",
+        <div
+          style={{
             width: "100%",
-            padding: "2vw 0",
+            display: "flex",
+            justifyContent: "center",
+            margin: "0 auto",
           }}
         >
-          <Link
-            href={process.env.REACT_APP_INSTAGRAM_URL}
-            color="inherit"
-            className="mouse-enlarge"
+          <Box
             sx={{
               display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
+              flexDirection: isSmallScreen ? "column" : "row",
+              justifyContent: "space-evenly",
+              gap: "3vh",
+              alignItems: isSmallScreen ? "start" : "center",
+              width: isSmallScreen ? "30%" : "100%",
+              padding: "2vw 0",
             }}
           >
-            <img
-              src="instagramIcon.png"
-              width={iconSize} height="auto"
-              alt="InstagramIcon"
-              style={{ borderRadius: "20px" }}
-            />
-            <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>Instagram</Typography>
-          </Link>
-          <Link
-            href={process.env.REACT_APP_LINKEDIN_URL}
-            color="inherit"
-            className="mouse-enlarge"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <img
-              src="linkedInIcon.png"
-              width={iconSize} height="auto"
-              alt="linkedInIcon"
-              style={{ borderRadius: "20px" }}
-            />
-            <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>LinkedIn</Typography>
-          </Link>
-          <Link
-            href={process.env.REACT_APP_WHATSAPP_URL}
-            color="inherit"
-            className="mouse-enlarge"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <img
-              src="whatsAppIcon.png"
-              width={iconSize} height="auto"
-              alt="WhatsAppIcon"
-              style={{ borderRadius: "20px" }}
-            />
-            <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>WhatsApp</Typography>
-          </Link>
-        </Box>
+            <Link
+              href={process.env.REACT_APP_INSTAGRAM_URL}
+              color="inherit"
+              className="mouse-enlarge"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              <img
+                src="instagramIcon.png"
+                width={iconSize}
+                height="auto"
+                alt="InstagramIcon"
+                style={{ borderRadius: "20px" }}
+              />
+              <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>
+                Instagram
+              </Typography>
+            </Link>
+            <Link
+              href={process.env.REACT_APP_LINKEDIN_URL}
+              color="inherit"
+              className="mouse-enlarge"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              <img
+                src="linkedInIcon.png"
+                width={iconSize}
+                height="auto"
+                alt="linkedInIcon"
+                style={{ borderRadius: "20px" }}
+              />
+              <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>
+                LinkedIn
+              </Typography>
+            </Link>
+            <Link
+              href={process.env.REACT_APP_WHATSAPP_URL}
+              color="inherit"
+              className="mouse-enlarge"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              <img
+                src="whatsAppIcon.png"
+                width={iconSize}
+                height="auto"
+                alt="WhatsAppIcon"
+                style={{ borderRadius: "20px" }}
+              />
+              <Typography sx={{ marginLeft: "10px", fontSize: fontSize }}>
+                WhatsApp
+              </Typography>
+            </Link>
+          </Box>
+        </div>
       </div>
     </div>
   );
