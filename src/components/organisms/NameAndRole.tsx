@@ -36,7 +36,7 @@ export const NameAndRole = ({
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
-          marginBottom: "10rem",
+          marginBottom: isSmallScreen ? "10rem" : "3vh",          
         }}
       >
         <Box sx={{ margin: "2rem auto" }}>
@@ -74,7 +74,12 @@ export const NameAndRole = ({
             </Typography>
           )}
         </Box>
-        <div style={{ marginTop: "2rem", width: "10%" }}>
+        <div style={{
+          marginTop: "2rem",
+          width: "10%",
+          justifyContent: "center",
+          display: "flex",
+        }}>
           {isSmallScreen ? (
             <ScrollButton scrollHeightRatio={0.6} />
           ) : (
